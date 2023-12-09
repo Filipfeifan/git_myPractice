@@ -1,0 +1,138 @@
+.todo_app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #3498db;
+  overflow-y: auto; /* make it scrollable */
+}
+
+.rectangle {
+  padding: 40px;
+  border: 2px solid #001f3f; /* Dark border color */
+  border-radius: 10px;
+  background-color: #001f3f; /* Dark background color inside the rectangle */
+  width: 800px;
+}
+
+.title {
+  color: white;
+  font-size: 50px;
+  text-align: center;
+  padding-bottom: 40px;
+  margin-bottom: 20px;
+}
+
+.inputContainer {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+}
+
+.input_field {
+  flex: 1; /* to make an item take up all available space in a flex container */
+  color: #3498db;
+  font-size: large;
+  font-weight: bold;
+  border: 2px solid #3498db;
+  border-radius: 10px;
+  padding: 10px 25px;
+  background: transparent;
+  margin-right: 15px;
+ }
+ 
+ .input_field:focus {
+  border-color: #7ebde7;
+  box-shadow: 0 0 5px #fff;
+ }
+ 
+.addTask_btn {
+  padding: 12.5px 30px;
+  border: 0;
+  border-radius: 10px;
+  background-color: #3498db;
+  color: #001f3f;
+  font-size: large;
+  font-weight: Bold;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  cursor: pointer;
+}
+
+.addTask_btn:hover {
+  background-color: #36acfb;
+  color:#fff;
+  transform: scale(1.1);
+}
+
+.addTask_btn:active {
+  background-color: #36acfb;
+  transition: all 0.25s;
+  -webkit-transition: all 0.25s;
+  transform: scale(0.98);
+}
+
+ul {
+  list-style-type: none;
+  padding: 10px;
+}
+
+li {
+  background-color: #3498db;
+  margin-bottom: 10px;
+  padding: 10px;
+  padding-left: 25px;
+  font-size: large;
+  font-weight: bold;
+  color:#001f3f;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Space between the task text and delete button */
+}
+
+.delete_button {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #3498db;
+  border: none;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition-duration: 0.3s;
+  overflow: hidden;
+  position: relative;
+}
+
+.delete_svgIcon {
+  width: 15px;
+  transition-duration: 0.3s;
+}
+
+.delete_button:hover {
+  width: 80px;
+  border-radius: 50px;
+  transition-duration: 0.3s;
+  background-color: rgb(255, 69, 69);
+  align-items: center;
+}
+
+.delete_button::before {
+  display: none;
+  content: "Delete";
+  color: white;
+  transition-duration: 0.3s;
+  font-size: 2px;
+}
+
+.delete_button:hover::before {
+  display: block;
+  padding-right: 5px;
+  font-size: 13px;
+  opacity: 1;
+  transform: translateY(0px);
+  transition-duration: 0.3s;
+}
